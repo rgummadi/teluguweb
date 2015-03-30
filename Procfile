@@ -1,0 +1,1 @@
+web:gunicorn teluguweb.wsgi --log-file -
