@@ -8,7 +8,8 @@ from .queries import *
 import os
 
 # Create your views here.
-
+def index(request):
+    return render(request, 'index.html')
 
 def news(request, paper=''):
     link_list = get_links(paper)
