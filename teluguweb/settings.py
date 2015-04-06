@@ -75,7 +75,7 @@ _MONGO_DB_HOST = \
     'mongodb://%s' \
     %(_MONGO_HOST,)
 _MONGO_URI = "mongodb://heroku_app35242924:90s0k6rnu5a9iulpc1lqbf3327@ds059471.mongolab.com:59471"
-#mongoengine.connect(_MONGO_DB_NAME, _MONGO_URI)
+mongoengine.connect(_MONGO_DB_NAME, _MONGO_URI)
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
 
