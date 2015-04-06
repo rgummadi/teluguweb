@@ -50,7 +50,7 @@
         <entry file="file://$PROJECT_DIR$/teluguweb/settings.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.56552964" vertical-offset="840" max-vertical-offset="1590">
-              <caret line="77" column="47" selection-start-line="77" selection-start-column="47" selection-end-line="77" selection-end-column="47" />
+              <caret line="77" column="34" selection-start-line="77" selection-start-column="34" selection-end-line="77" selection-end-column="34" />
               <folding>
                 <element signature="e#320#329#0" expanded="true" />
               </folding>
@@ -1208,7 +1208,7 @@
     <entry file="file://$PROJECT_DIR$/teluguweb/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.56552964" vertical-offset="840" max-vertical-offset="1590">
-          <caret line="77" column="47" selection-start-line="77" selection-start-column="47" selection-end-line="77" selection-end-column="47" />
+          <caret line="77" column="34" selection-start-line="77" selection-start-column="34" selection-end-line="77" selection-end-column="34" />
           <folding>
             <element signature="e#320#329#0" expanded="true" />
           </folding>
