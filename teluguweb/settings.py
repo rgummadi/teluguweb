@@ -71,9 +71,6 @@ AUTHENTICATION_BACKENDS = (
 
 _MONGO_HOST = 'localhost'
 _MONGO_DB_NAME = 'heroku_app35242924' #'teluguweb'
-_MONGO_DB_HOST = \
-    'mongodb://%s' \
-    %(_MONGO_HOST,)
 _MONGO_URI = "mongodb://heroku_app35242924:90s0k6rnu5a9iulpc1lqbf3327@ds059471.mongolab.com:59471/heroku_app35242924"
 mongoengine.connect(_MONGO_DB_NAME, host=_MONGO_URI)
 # Internationalization

@@ -5,7 +5,7 @@ from django.conf import settings
 urlpatterns = patterns('teluguwebapp.views',
     # Examples:
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^$', 'index', name='index'),
+    url(r'^$', 'news', name='index'),
     url(r'^index/', 'news', name='index'),
     url(r'^news/(\w+)/$', 'news', name='news')
 
