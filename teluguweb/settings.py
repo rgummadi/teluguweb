@@ -12,7 +12,15 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 import os
 import mongoengine
 
+# ===========================
+# = Directory Declaractions =
+# ===========================
+
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+STATIC_URL = '/static/'
+TEMPLATES_DIR = (os.path.join(BASE_DIR,'teluguwebapp/templates/'),)
+STATICFILES_DIRS = (os.path.join(BASE_DIR, "teluguwebapp/static/"),)
+#STATIC_ROOT = '/Users/rgummadi/Dropbox/WWW/dev/teluguweb/teluguwebapp/static/'
 
 #print (BASE_DIR)
 # Quick-start development settings - unsuitable for production
@@ -69,12 +77,16 @@ AUTHENTICATION_BACKENDS = (
     'mongoengine.django.auth.MongoEngineBackend',
 )
 
-_MONGO_HOST = 'localhost'
+# =========
+# = Mongo =
+# =========
+
 _MONGO_DB_NAME = 'heroku_app35242924'
-#_MONGO_DB_NAME = 'teluguweb'
 _MONGO_URI = "mongodb://heroku_app35242924:90s0k6rnu5a9iulpc1lqbf3327@ds059471.mongolab.com:59471/heroku_app35242924"
+
 mongoengine.connect(_MONGO_DB_NAME, host=_MONGO_URI)
-#mongoengine.connect(_MONGO_DB_NAME)
+
+
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
 
@@ -92,8 +104,5 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
-STATIC_URL = '/static/'
-TEMPLATES_DIR = (os.path.join(BASE_DIR,'teluguwebapp/templates/'),)
-STATICFILES_DIRS = (os.path.join(BASE_DIR, "teluguwebapp/static/"),)
-#STATIC_ROOT = '/Users/rgummadi/Dropbox/WWW/dev/teluguweb/teluguwebapp/static/'
+
 
