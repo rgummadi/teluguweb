@@ -28,6 +28,9 @@ AWS_SECRET_ACCESS_KEY = os.environ["AWS_SECRET_KEY"]
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
 
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = 'im*k0tlqdz$#aok#3v$m3%lmrj@#r6tctxxu81l_(74r_8q&3r'
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
