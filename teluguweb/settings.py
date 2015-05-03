@@ -19,7 +19,8 @@ import mongoengine
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 STATIC_URL = '/static/'
 TEMPLATES_DIR = (os.path.join(BASE_DIR,'teluguwebapp/templates/'),)
-STATICFILES_DIRS = "s3://%s/" % os.environ["S3_BUCKET"]
+# STATICFILES_DIRS = "s3://%s/" % os.environ["S3_BUCKET"]
+STATICFILES_DIRS = (os.path.join(BASE_DIR, "teluguwebapp/static/"),)
 AWS_ACCESS_KEY_ID = os.environ["AWS_ACCESS_KEY"]
 AWS_SECRET_ACCESS_KEY = os.environ["AWS_SECRET_KEY"]
 
