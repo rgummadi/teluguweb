@@ -38,7 +38,7 @@ DEBUG = False
 
 TEMPLATE_DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost','teluguweb.herokuapp.com']
 
 
 # Application definition
