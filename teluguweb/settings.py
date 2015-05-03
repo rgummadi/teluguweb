@@ -81,8 +81,8 @@ AUTHENTICATION_BACKENDS = (
 # = Mongo =
 # =========
 
-_MONGO_DB_NAME = 'heroku_app35242924'
-_MONGO_URI = "mongodb://heroku_app35242924:90s0k6rnu5a9iulpc1lqbf3327@ds059471.mongolab.com:59471/heroku_app35242924"
+_MONGO_DB_NAME = 'heroku_app36456202'
+_MONGO_URI = os.environ["MONGOLAB_URI"]
 
 mongoengine.connect(_MONGO_DB_NAME, host=_MONGO_URI)
 
