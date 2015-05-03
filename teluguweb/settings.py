@@ -20,18 +20,17 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 STATIC_URL = '/static/'
 TEMPLATES_DIR = (os.path.join(BASE_DIR,'teluguwebapp/templates/'),)
 STATICFILES_DIRS = "s3://%s/images/" % os.environ["S3_BUCKET"]
+AWS_ACCESS_KEY_ID = os.environ["AWS_ACCESS_KEY"]
+AWS_SECRET_ACCESS_KEY = os.environ["AWS_SECRET_KEY"]
 
-#STATIC_ROOT = '/Users/rgummadi/Dropbox/WWW/dev/teluguweb/teluguwebapp/static/'
 
 #print (BASE_DIR)
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'im*k0tlqdz$#aok#3v$m3%lmrj@#r6tctxxu81l_(74r_8q&3r'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 TEMPLATE_DEBUG = True
 
