@@ -19,7 +19,8 @@ import mongoengine
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 STATIC_URL = '/static/'
 TEMPLATES_DIR = (os.path.join(BASE_DIR,'teluguwebapp/templates/'),)
-STATICFILES_DIRS = (os.path.join(BASE_DIR, "teluguwebapp/static/"),)
+STATICFILES_DIRS = "s3://%s/images/" % os.environ["S3_BUCKET"]
+
 #STATIC_ROOT = '/Users/rgummadi/Dropbox/WWW/dev/teluguweb/teluguwebapp/static/'
 
 #print (BASE_DIR)
