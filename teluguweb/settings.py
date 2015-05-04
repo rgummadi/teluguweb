@@ -20,7 +20,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 STATIC_URL = '/static/'
 TEMPLATES_DIR = (os.path.join(BASE_DIR,'teluguwebapp/templates/'),)
 STATICFILES_DIRS = "s3://%s/" % os.environ["S3_BUCKET"]
-
+# STATICFILES_DIRS = (os.path.join(BASE_DIR, "teluguwebapp/static/"),)
+AWS_ACCESS_KEY_ID = os.environ["AWS_ACCESS_KEY"]
+AWS_SECRET_ACCESS_KEY = os.environ["AWS_SECRET_KEY"]
 
 
 #print (BASE_DIR)
@@ -107,6 +109,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
 
-STATICFILES_DIRS = (os.path.join(BASE_DIR, "teluguwebapp/static/"),)
-AWS_ACCESS_KEY_ID = os.environ["AWS_ACCESS_KEY"]
-AWS_SECRET_ACCESS_KEY = os.environ["AWS_SECRET_KEY"]
+
