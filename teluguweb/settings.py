@@ -17,10 +17,14 @@ import mongoengine
 # ===========================
 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
-STATIC_URL = '/static/'
+
+# STATIC_URL = '/static/'
 TEMPLATES_DIR = (os.path.join(BASE_DIR,'teluguwebapp/templates/'),)
-STATICFILES_DIRS = "s3://%s/" % os.environ["S3_BUCKET"]
-# STATICFILES_DIRS = (os.path.join(BASE_DIR, "teluguwebapp/static/"),)
+# STATICFILES_DIRS = "s3://%s/" % os.environ["S3_BUCKET"]
+STATICFILES_DIRS = (os.path.join(BASE_DIR, "teluguwebapp/static/"),)
+STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+STATIC_URL = "http://%s.s3.amazonaws.com/" % os.environ["S3_BUCKET"]
+
 AWS_ACCESS_KEY_ID = os.environ["AWS_ACCESS_KEY"]
 AWS_SECRET_ACCESS_KEY = os.environ["AWS_SECRET_KEY"]
 
@@ -34,7 +38,7 @@ SECRET_KEY = 'im*k0tlqdz$#aok#3v$m3%lmrj@#r6tctxxu81l_(74r_8q&3r'
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 TEMPLATE_DEBUG = True
 
@@ -50,6 +54,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'storages'
     'teluguwebapp',
 )
 
