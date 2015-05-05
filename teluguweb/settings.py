@@ -109,7 +109,7 @@ TEMPLATES_DIR = (os.path.join(BASE_DIR,'teluguwebapp/templates/'),)
 # STATICFILES_DIRS = "s3://%s/" % os.environ["S3_BUCKET"]
 STATICFILES_DIRS = (os.path.join(BASE_DIR, "teluguwebapp/static/"),)
 STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
-STATIC_URL = "http://%s.s3.amazonaws.com/" % os.environ["S3_BUCKET"]
+STATIC_URL = "https://%s.s3.amazonaws.com/" % os.environ["S3_BUCKET"]
 
 AWS_STORAGE_BUCKET_NAME = os.environ["S3_BUCKET"]
 AWS_ACCESS_KEY_ID = os.environ["AWS_ACCESS_KEY"]
