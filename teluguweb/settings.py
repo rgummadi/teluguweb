@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 import os
 import mongoengine
 
+
 # ===========================
 # = Directory Declaractions =
 # ===========================
@@ -25,6 +26,7 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, "teluguwebapp/static/"),)
 STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
 STATIC_URL = "http://%s.s3.amazonaws.com/" % os.environ["S3_BUCKET"]
 
+AWS_STORAGE_BUCKET_NAME = os.environ["S3_BUCKET"]
 AWS_ACCESS_KEY_ID = os.environ["AWS_ACCESS_KEY"]
 AWS_SECRET_ACCESS_KEY = os.environ["AWS_SECRET_KEY"]
 
