@@ -9,8 +9,31 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 """
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-import os
+from os.path import join, abspath, dirname
+from os import environ
 import mongoengine
+
+# ===========================
+# = Directory Declarations =
+# ===========================
+
+BASE_DIR = dirname(dirname(dirname(__file__)))
+
+
+print(BASE_DIR)
+
+
+
+# STATIC_URL = '/static/'
+TEMPLATES_DIR = (join(BASE_DIR,'teluguwebapp/templates/'),)
+STATICFILES_DIRS = (join(BASE_DIR, "teluguwebapp/static/"),)
+
+print(STATICFILES_DIRS)
+
+
+AWS_STORAGE_BUCKET_NAME = environ["S3_BUCKET"]
+AWS_ACCESS_KEY_ID = environ["AWS_ACCESS_KEY"]
+AWS_SECRET_ACCESS_KEY = environ["AWS_SECRET_KEY"]
 
 
 #print (BASE_DIR)
@@ -22,7 +45,6 @@ SECRET_KEY = 'im*k0tlqdz$#aok#3v$m3%lmrj@#r6tctxxu81l_(74r_8q&3r'
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
 
 TEMPLATE_DEBUG = True
 
@@ -70,14 +92,7 @@ AUTHENTICATION_BACKENDS = (
     'mongoengine.django.auth.MongoEngineBackend',
 )
 
-# =========
-# = Mongo =
-# =========
 
-_MONGO_DB_NAME = 'heroku_app36456202'
-_MONGO_URI = os.environ["MONGOLAB_URI"]
-
-mongoengine.connect(_MONGO_DB_NAME, host=_MONGO_URI)
 
 
 # Internationalization
@@ -98,21 +113,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
 
-# ===========================
-# = Directory Declaractions =
-# ===========================
 
-BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
-AWS_STORAGE_BUCKET_NAME = os.environ["S3_BUCKET"]
-AWS_ACCESS_KEY_ID = os.environ["AWS_ACCESS_KEY"]
-AWS_SECRET_ACCESS_KEY = os.environ["AWS_SECRET_KEY"]
-
-# STATIC_URL = '/static/'
-TEMPLATES_DIR = (os.path.join(BASE_DIR,'teluguwebapp/templates/'),)
-# STATICFILES_DIRS = "s3://%s/" % os.environ["S3_BUCKET"]
-STATICFILES_DIRS = (os.path.join(BASE_DIR, "teluguwebapp/static/"),)
-STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
-STATIC_URL = "https://%s.s3.amazonaws.com/" % os.environ["S3_BUCKET"]
 
 
