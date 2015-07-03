@@ -1,8 +1,9 @@
 # local.py
 from .base import *
 
-STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
-STATIC_URL = "https://%s.s3.amazonaws.com/" % environ["S3_BUCKET"]
+# STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+# STATIC_URL = "https://%s.s3.amazonaws.com/" % environ["S3_BUCKET"]
+STATIC_URL = "/static/"
 
 # print(STATIC_URL)
 
