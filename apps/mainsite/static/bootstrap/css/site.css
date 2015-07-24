@@ -1,0 +1,20 @@
+/*
+ * Base structure
+ */
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 50px;
+}
+
+.itemlist li {list-style-type:none;}
+.clear { clear: both;}
+
+
+.newsitem {padding:10px;margin:2px;float:left;background-color: #eeeeee;}
+.ntitle {font-size:1.2em;font-weight:bold;}
+.ntitle a {text-decoration:none;color:#222E6B;}
+.ndesc {font-size:1.0em;}
+.nsource {font-size:0.8em;padding-top:2px;}
+.nthumb {}
+.nthumb img {float:left;padding:3px;}
