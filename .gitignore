@@ -60,3 +60,4 @@ target/
 #In Teluguweb
 teluguwebapp/static/images/
 *.pyc
+.idea/
