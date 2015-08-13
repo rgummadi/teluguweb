@@ -12,7 +12,7 @@
   </component>
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$" />
-    <orderEntry type="jdk" jdkName="Python 3.4.3 virtualenv at ~/Dropbox/WWW/envs/teluguweb" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.4.3 virtualenv at ~/envs/teluguweb" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="teluguwebscrape" />
     <orderEntry type="module" module-name="tw" />
